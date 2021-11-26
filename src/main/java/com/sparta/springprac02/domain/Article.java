@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Article {
+public class Article extends Timestamped{
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
@@ -19,4 +19,7 @@ public class Article {
 
     @Column(nullable = false)
     private String content;
+
+    @Column(nullable = false)
+    private String tags;
 }
